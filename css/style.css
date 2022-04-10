@@ -1,13 +1,16 @@
 :root {
     --black: #222222;
+    --shadow: rgba(0, 0, 0, 0.2);
     --light-pink: #F1E4E6;
     --dark-pink: #F26376;
+    --black-pink: #a54653;
     --sale-bkg-color: rgba(33, 22, 22, 0.7);
     --white: #FFFFFF;
     --products-bkg-color: #F8F8F8;
     --light-gray: #E1E1E1;
     --gray: #9F9F9F;
     --dark-gray: #5D5D5D;
+    --red: #ff0000;
 }
 
 body {
@@ -35,6 +38,34 @@ body {
 .container {
     max-width: 1140px;
     margin: auto;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--red);
+    cursor: pointer;
+}
+
+.link:active {
+    color: var(--gray);
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.5;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:active {
+    opacity: 0.7;
+}
+
+.input:hover,
+.input:focus {
+    outline: 0 solid var(--dark-pink);
+    background: var(--light-pink);
+    cursor: pointer;
 }
 
 /*------------------------------HEADER----------------------------------*/
@@ -67,14 +98,22 @@ body {
     margin: 0 0 0 34px;
 }
 
+.header__button:hover+.header__nav,
+.header__button:focus+.header__nav {
+    display: block;
+}
+
 .header__nav {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 75px;
     left: 1140px;
+    height: 765px;
+    width: 230px;
     padding: 35px;
     box-sizing: border-box;
     background-color: var(--white);
+    box-shadow: 0 0 21px var(--shadow);
 }
 
 .header__title {
@@ -220,6 +259,41 @@ body {
     margin: 0 0 30px 0;
 }
 
+.products__overlay-wrp {
+    position: relative;
+}
+
+.products__overlay-wrp:hover .products__overlay,
+.products__overlay-wrp:hover .products__button {
+    display: block;
+}
+
+.products__overlay {
+    display: none;
+    background-color: rgba(58, 56, 56, 0.86);
+    width: 100%;
+    min-height: 420px;
+    position: absolute;
+    top: 0;
+}
+
+.products__button {
+    display: none;
+    height: 43px;
+    padding: 0 16px;
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products__button::before {
+    content: url(../img/ic/basket-ic.svg);
+}
+
 .products__wrp {
     display: flex;
     flex-direction: column;
@@ -262,6 +336,132 @@ body {
     box-sizing: border-box;
 }
 
+.products__link:hover,
+.products__link:focus {
+    color: var(--white);
+    background-color: var(--dark-pink);
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+    cursor: pointer;
+    outline: none;
+}
+
+.products__link:active {
+    background-color: var(--black-pink);
+}
+
+/*-------------------------------REGISTRATION----------------------------*/
+
+.registration {
+    background-color: var(--light-pink);
+}
+
+.registration__title {
+    color: var(--dark-pink);
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.loyalty {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px 0 96px;
+}
+
+.loyalty__form {
+    width: 360px;
+}
+
+.loyalty__fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.loyalty__legend {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    margin: 0 0 10px;
+}
+
+.loyalty__input {
+    margin: 10px 0;
+    height: 45px;
+    padding: 0 17px;
+}
+
+.loyalty__radio {
+    margin: 20px 0 32px;
+}
+
+.loyalty__text-form {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    opacity: 0.4;
+    margin: 0 0 39px;
+}
+
+.loyalty__button {
+    padding: 16px 0 16px 29px;
+    height: 49px;
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border: none;
+    text-transform: uppercase;
+}
+
+.loyalty__button:active {
+    background-color: var(--black-pink);
+}
+
+.loyalty__button:hover,
+.loyalty__button:focus {
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+    cursor: pointer;
+    outline: none;
+}
+
+.loyalty__button::after {
+    content: url(../img/ic/arrow-ic.svg);
+    margin: 0 20px 0;
+}
+
+.loyalty__wrp {
+    width: 652px;
+}
+
+.loyalty__title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    text-transform: uppercase;
+}
+
+.loyalty__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin: 22px 0;
+}
+
+.loyalty__item {
+    margin: 16px 0;
+}
+
+.loyalty__text-sub::before {
+    content: url(../img/ic/check-ic.svg);
+    margin: 0 23px 0 0;
+}
+
+.loyalty__text-sub {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+}
+
 /*-------------------------------ADVANTAGES----------------------------*/
 
 .advantages {
@@ -278,6 +478,10 @@ body {
     text-align: center;
     padding: 103px 20px;
     box-sizing: border-box;
+}
+
+.advantages__img {
+    height: 35px;
 }
 
 .advantages__title {
@@ -354,18 +558,28 @@ body {
     height: 49px;
     background-color: var(--light-gray);
     border: none;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-radius: 25px 0 0 25px;
 }
 
 .footer__button {
     padding: 0 22px 0;
+    margin: 0 0 0 -3px;
     height: 49px;
     background-color: var(--dark-pink);
     color: var(--white);
     border: none;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 0 25px 25px 0;
+}
+
+.footer__button:hover,
+.footer__button:focus {
+    box-shadow: 5px 5px 10px 2px var(--shadow);
+    cursor: pointer;
+    outline: none;
+}
+
+.footer__button:active {
+    background-color: var(--black-pink);
 }
 
 .footer__wrp-down {
