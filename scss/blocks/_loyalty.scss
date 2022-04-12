@@ -1,0 +1,91 @@
+.loyalty {
+    display: flex;
+    justify-content: space-between;
+    margin: 64px 0 96px;
+
+    &__form {
+        width: 360px;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__legend {
+        @include font(16px, 19px, 300);
+        margin: 0 0 10px;
+    }
+
+    &__input {
+        margin: 10px 0;
+        height: 45px;
+        padding: 0 17px;
+    }
+
+    &__radio {
+        margin: 20px 0 32px;
+    }
+
+    &__input-radio {
+        margin: 0 10px 0 20px;
+    }
+
+    &__text-form {
+        @include font(13px, 16px, 300);
+        opacity: 0.4;
+        margin: 0 0 39px;
+    }
+
+    &__button {
+        padding: 16px 0 16px 29px;
+        height: 49px;
+        background-color: $dark-pink;
+        color: $white;
+        border: none;
+        text-transform: uppercase;
+
+        &:active {
+            background-color: $black-pink;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: 5px 5px 10px 2px $shadow;
+            cursor: pointer;
+            outline: none;
+        }
+
+        &::after {
+            content: url(../img/ic/arrow-ic.svg);
+            margin: 0 20px 0;
+        }
+    }
+
+    &__wrp {
+        width: 652px;
+    }
+
+    &__title {
+        @include font(24px, 29px, 300);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(24px, 29px, 300);
+        margin: 22px 0;
+    }
+
+    &__item {
+        margin: 16px 0;
+    }
+
+    &__text-sub {
+        @include font(24px, 29px, 300);
+
+        &:before {
+            content: url(../img/ic/check-ic.svg);
+            margin: 0 23px 0 0;
+        }
+    }
+}

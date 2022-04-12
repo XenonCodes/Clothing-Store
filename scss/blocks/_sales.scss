@@ -1,0 +1,50 @@
+.sales {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $sale-bkg-color;
+        width: 360px;
+        min-height: 260px;
+        margin: 0 0 32px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+
+        &--woman {
+            background-image: url(../img/sales-woman-bkg.jpg);
+        }
+
+        &--men {
+            background-image: url(../img/sales-man-bkg.jpg);
+        }
+
+        &--kids {
+            background-image: url(../img/sales-kids-bkg.jpg);
+        }
+
+        &--accesories {
+            width: 100%;
+            min-height: 180px;
+            background-image: url(../img/sales-accessories-bkg.jpg);
+            margin: 0 0 97px;
+        }
+    }
+
+    &__text {
+        color: $white;
+        @include font(16px, 19px);
+    }
+
+    &__title {
+        color: $dark-pink;
+        @include font(24px, 29px, 700);
+    }
+}

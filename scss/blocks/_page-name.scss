@@ -1,0 +1,11 @@
+.page-name {
+    background-color: $light-pink;
+
+    &__title {
+        color: $dark-pink;
+        @include font(24px, 29px);
+        text-transform: uppercase;
+        padding: 60px 0;
+        box-sizing: border-box;
+    }
+}

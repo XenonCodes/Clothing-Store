@@ -1,0 +1,108 @@
+.header {
+    background-color: $black;
+
+    &__wrp {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    &__wrp-logo {
+        display: flex;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__loupe {
+        display: flex;
+        align-items: center;
+
+        &:hover+.header__search,
+        &:focus+.header__search {
+            display: block;
+        }
+    }
+
+    &__search {
+        display: none;
+        border: none;
+        position: absolute;
+        top: 38px;
+        transform: translate(25%, -50%);
+        height: 30px;
+        border-radius: 17px;
+        padding: 15px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+
+        &:hover+.header__nav,
+        &:focus+.header__nav {
+            display: block;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* .header__overlay {
+        display: none;
+        height: 765px;
+        position: absolute;
+        top: 75px;
+        left: -500px;
+        right: -315px;
+        z-index: 2;
+        background-color: $shadow;
+    } */
+
+    &__link {
+        margin: 0 0 0 34px;
+    }
+
+    /* .header__button:hover .header__overlay,
+    .header__button:focus .header__overlay {
+        display: block;
+    } */
+
+    &__nav {
+        z-index: 3;
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 970px;
+        height: 765px;
+        width: 230px;
+        padding: 35px;
+        box-sizing: border-box;
+        background-color: $white;
+        box-shadow: 0 0 21px $shadow;
+    }
+
+    &__title {
+        @include font($font-weight: 700);
+        text-transform: uppercase;
+        margin: 0 0 24px;
+    }
+}
