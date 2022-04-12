@@ -1,6 +1,6 @@
 :root {
     --black: #222222;
-    --shadow: rgba(0, 0, 0, 0.2);
+    --shadow: rgba(0, 0, 0, 0.4);
     --light-pink: #F1E4E6;
     --dark-pink: #F26376;
     --black-pink: #a54653;
@@ -81,11 +81,43 @@ body {
     align-items: center;
 }
 
+.header__wrp-logo {
+    display: flex;
+}
+
 .header__logo {
     margin: 0 41px 0 0;
 }
 
+.header__form {
+    display: flex;
+}
+
+.header__loupe {
+    display: flex;
+    align-items: center;
+}
+
+.header__loupe:hover+.header__search,
+.header__loupe:focus+.header__search {
+    display: block;
+}
+
+.header__search {
+    display: none;
+    position: absolute;
+    top: 38px;
+    transform: translate(25%, -50%);
+    height: 30px;
+    border-radius: 17px;
+    padding: 15px;
+}
+
 .header__list {
+    display: flex;
+}
+
+.header__item {
     display: flex;
 }
 
@@ -93,6 +125,23 @@ body {
     border: none;
     background-color: transparent;
 }
+
+.header__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* .header__overlay {
+    display: none;
+    height: 765px;
+    position: absolute;
+    top: 75px;
+    left: -500px;
+    right: -315px;
+    z-index: 2;
+    background-color: var(--shadow);
+} */
 
 .header__link {
     margin: 0 0 0 34px;
@@ -103,11 +152,17 @@ body {
     display: block;
 }
 
+/* .header__button:hover .header__overlay,
+.header__button:focus .header__overlay {
+    display: block;
+} */
+
 .header__nav {
+    z-index: 3;
     display: none;
     position: absolute;
     top: 75px;
-    left: 1140px;
+    left: 970px;
     height: 765px;
     width: 230px;
     padding: 35px;
@@ -158,10 +213,22 @@ body {
 }
 
 .brand__title {
+    position: relative;
+    z-index: 1;
     font-size: 48px;
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+}
+
+.brand__title::before {
+    position: absolute;
+    content: '';
+    background-color: var(--dark-pink);
+    top: 0px;
+    left: -25px;
+    bottom: 0px;
+    width: 12px;
 }
 
 .brand__subtitle {
@@ -265,7 +332,8 @@ body {
 
 .products__overlay-wrp:hover .products__overlay,
 .products__overlay-wrp:hover .products__button {
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .products__overlay {
@@ -291,7 +359,12 @@ body {
 }
 
 .products__button::before {
-    content: url(../img/ic/basket-ic.svg);
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/ic/basket-ic.svg);
+    background-size: 25px 25px;
+    margin: 9px 11px 9px 0;
 }
 
 .products__wrp {
@@ -394,6 +467,10 @@ body {
 
 .loyalty__radio {
     margin: 20px 0 32px;
+}
+
+.loyalty__input-radio {
+    margin: 0 10px 0 20px;
 }
 
 .loyalty__text-form {
@@ -510,7 +587,7 @@ body {
     background-size: cover;
 }
 
-.footer__wrp-up {
+.footer__wrp-feedback {
     min-height: 448px;
     display: flex;
     align-items: center;
@@ -582,7 +659,7 @@ body {
     background-color: var(--black-pink);
 }
 
-.footer__wrp-down {
+.footer__wrp-copyright {
     display: flex;
     justify-content: space-between;
     align-items: center;
