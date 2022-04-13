@@ -175,20 +175,6 @@ body {
 
 .header {
   background-color: #222222;
-  /* .header__overlay {
-        display: none;
-        height: 765px;
-        position: absolute;
-        top: 75px;
-        left: -500px;
-        right: -315px;
-        z-index: 2;
-        background-color: $shadow;
-    } */
-  /* .header__button:hover .header__overlay,
-    .header__button:focus .header__overlay {
-        display: block;
-    } */
 }
 
 .header__wrp {
@@ -199,7 +185,7 @@ body {
   align-items: center;
 }
 
-.header__wrp-logo {
+.header__flex {
   display: flex;
 }
 
@@ -207,37 +193,44 @@ body {
   margin: 0 41px 0 0;
 }
 
+.header__logo:focus {
+  opacity: 0.5;
+  cursor: pointer;
+  outline: none;
+}
+
 .header__form {
   display: flex;
+  width: 28px;
+  position: relative;
 }
 
-.header__loupe {
-  display: flex;
-  align-items: center;
+.header__form:before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-image: url(../img/ic/loupe-ic.svg);
+  background-size: 28px 28px;
 }
 
-.header__loupe:hover + .header__search,
-.header__loupe:focus + .header__search {
+.header__form:hover .header__search,
+.header__form:focus .header__search {
   display: block;
 }
 
 .header__search {
-  display: none;
+  display: flex;
   border: none;
+  background: transparent;
   position: absolute;
-  top: 38px;
-  transform: translate(25%, -50%);
+  top: 50%;
+  transform: translate(0, -50%);
   height: 30px;
   border-radius: 17px;
-  padding: 15px;
-}
-
-.header__list {
-  display: flex;
-}
-
-.header__item {
-  display: flex;
+  padding: 15px 35px;
 }
 
 .header__button {
@@ -289,6 +282,10 @@ body {
   text-decoration: none;
 }
 
+.nav-sub__title:hover, .nav-sub__title:focus {
+  text-decoration: underline;
+}
+
 .nav-sub__list {
   margin: 12px 20px 20px;
 }
@@ -298,7 +295,7 @@ body {
 }
 
 .nav-sub__link {
-  color: var(--gray);
+  color: #9F9F9F;
   text-decoration: none;
 }
 
@@ -548,22 +545,22 @@ body {
   background-color: #a54653;
 }
 
-.loyalty {
+.registration {
   display: flex;
   justify-content: space-between;
   margin: 64px 0 96px;
 }
 
-.loyalty__form {
+.registration__form {
   width: 360px;
 }
 
-.loyalty__fieldset {
+.registration__fieldset {
   display: flex;
   flex-direction: column;
 }
 
-.loyalty__legend {
+.registration__legend {
   font-size: 16px;
   line-height: 19px;
   font-weight: 300;
@@ -571,21 +568,21 @@ body {
   margin: 0 0 10px;
 }
 
-.loyalty__input {
+.registration__input {
   margin: 10px 0;
   height: 45px;
   padding: 0 17px;
 }
 
-.loyalty__radio {
+.registration__radio {
   margin: 20px 0 32px;
 }
 
-.loyalty__input-radio {
+.registration__input-radio {
   margin: 0 10px 0 20px;
 }
 
-.loyalty__text-form {
+.registration__text-form {
   font-size: 13px;
   line-height: 16px;
   font-weight: 300;
@@ -594,7 +591,7 @@ body {
   margin: 0 0 39px;
 }
 
-.loyalty__button {
+.registration__button {
   padding: 16px 0 16px 29px;
   height: 49px;
   background-color: #F26376;
@@ -603,26 +600,26 @@ body {
   text-transform: uppercase;
 }
 
-.loyalty__button:active {
+.registration__button:active {
   background-color: #a54653;
 }
 
-.loyalty__button:hover, .loyalty__button:focus {
+.registration__button:hover, .registration__button:focus {
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   outline: none;
 }
 
-.loyalty__button::after {
+.registration__button::after {
   content: url(../img/ic/arrow-ic.svg);
   margin: 0 20px 0;
 }
 
-.loyalty__wrp {
+.registration__wrp {
   width: 652px;
 }
 
-.loyalty__title {
+.registration__title {
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
@@ -630,7 +627,7 @@ body {
   text-transform: uppercase;
 }
 
-.loyalty__text {
+.registration__text {
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
@@ -638,18 +635,18 @@ body {
   margin: 22px 0;
 }
 
-.loyalty__item {
+.registration__item {
   margin: 16px 0;
 }
 
-.loyalty__text-sub {
+.registration__text-sub {
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
   font-style: normal;
 }
 
-.loyalty__text-sub:before {
+.registration__text-sub:before {
   content: url(../img/ic/check-ic.svg);
   margin: 0 23px 0 0;
 }

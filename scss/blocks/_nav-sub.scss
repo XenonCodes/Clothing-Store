@@ -3,6 +3,11 @@
         color: $dark-pink;
         text-transform: uppercase;
         text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 
     &__list {
@@ -14,7 +19,7 @@
     }
 
     &__link {
-        color: var(--gray);
+        color: $gray;
         text-decoration: none;
     }
 }

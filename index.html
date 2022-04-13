@@ -18,19 +18,17 @@
 
     <header class="header">
         <div class="container header__wrp">
-            <div class="header__wrp-logo">
-                <a class="button" href="#"><img class="header__logo" src="./img/logo.png" alt="logo-icon"></a>
+            <div class="header__flex">
+                <a class="header__logo button" href="#"><img src="./img/logo.png" alt="logo-icon"></a>
                 <form class="header__form" action="#">
-                    <label class="header__loupe" for="search"><img class="button" src="./img/ic/loupe-ic.svg"
-                            alt="loupe-icon"></label>
+                    <label class="visually-hidden" for="search">Search</label>
                     <input class="header__search input" type="search" id="search" placeholder="Search">
                 </form>
             </div>
-            <ul class="header__list">
-                <li class="header__item">
+            <ul class="header__flex">
+                <li class="header__flex">
                     <button class="header__button button" type="button">
                         <img src="./img/ic/burger-ic.svg" alt="burger-icon">
-                        <!-- <div class="header__overlay"></div> -->
                     </button>
                     <nav class="header__nav">
                         <div class="header__close">
@@ -40,8 +38,8 @@
                             </svg>
                         </div>
                         <h2 class="header__title">menu</h2>
-                        <ul class="header__nav-list">
-                            <li class="header__nav-item nav-sub">
+                        <ul>
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">man</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -58,7 +56,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">woman</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -78,7 +76,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">kids</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -104,21 +102,20 @@
                         </ul>
                     </nav>
                 </li>
-                <li class="header__item">
-                    <a class="header__link button" href="./registration.html"><img class=""
-                            src="./img/ic/profile-ic.svg" alt="profile-icon"></a>
+                <li class="header__flex">
+                    <a class="header__link button" href="./registration.html"><img src="./img/ic/profile-ic.svg"
+                            alt="profile-icon"></a>
                 </li>
-                <li class="header__item">
+                <li class="header__flex">
                     <a class="header__link button" href="#"><img src="./img/ic/basket-ic.svg" alt="basket-icon"></a>
                 </li>
             </ul>
-
         </div>
     </header>
 
     <main>
         <section class="brand">
-            <img class="brand__img" src="./img/man.jpg" alt="man">
+            <img src="./img/man.jpg" alt="man">
             <div class="brand__title-wrp">
                 <h1 class="brand__title">the brand <span class="brand__subtitle">of luxerious <span
                             class="brand__subtitle-pink">fashion</span></span> </h1>

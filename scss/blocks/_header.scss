@@ -9,45 +9,52 @@
         align-items: center;
     }
 
-    &__wrp-logo {
+    &__flex {
         display: flex;
     }
 
     &__logo {
         margin: 0 41px 0 0;
+
+        &:focus {
+            opacity: 0.5;
+            cursor: pointer;
+            outline: none;
+        }
     }
 
     &__form {
         display: flex;
-    }
+        width: 28px;
+        position: relative;
 
-    &__loupe {
-        display: flex;
-        align-items: center;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-image: url(../img/ic/loupe-ic.svg);
+            background-size: 28px 28px;
+        }
 
-        &:hover+.header__search,
-        &:focus+.header__search {
+        &:hover .header__search,
+        &:focus .header__search {
             display: block;
         }
     }
 
     &__search {
-        display: none;
+        display: flex;
         border: none;
+        background: transparent;
         position: absolute;
-        top: 38px;
-        transform: translate(25%, -50%);
+        top: 50%;
+        transform: translate(0, -50%);
         height: 30px;
         border-radius: 17px;
-        padding: 15px;
-    }
-
-    &__list {
-        display: flex;
-    }
-
-    &__item {
-        display: flex;
+        padding: 15px 35px;
     }
 
     &__button {
@@ -66,25 +73,9 @@
         right: 20px;
     }
 
-    /* .header__overlay {
-        display: none;
-        height: 765px;
-        position: absolute;
-        top: 75px;
-        left: -500px;
-        right: -315px;
-        z-index: 2;
-        background-color: $shadow;
-    } */
-
     &__link {
         margin: 0 0 0 34px;
     }
-
-    /* .header__button:hover .header__overlay,
-    .header__button:focus .header__overlay {
-        display: block;
-    } */
 
     &__nav {
         z-index: 3;

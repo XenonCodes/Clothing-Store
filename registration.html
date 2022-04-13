@@ -17,20 +17,17 @@
 <body>
     <header class="header">
         <div class="container header__wrp">
-            <div class="header__wrp-logo">
-                <a class="button" href="./index.html"><img class="header__logo" src="./img/logo.png"
-                        alt="logo-icon"></a>
+            <div class="header__flex">
+                <a class="header__logo button" href="./index.html"><img src="./img/logo.png" alt="logo-icon"></a>
                 <form class="header__form" action="#">
-                    <label class="header__loupe" for="search"><img class="button" src="./img/ic/loupe-ic.svg"
-                            alt="loupe-icon"></label>
+                    <label class="visually-hidden" for="search">Search</label>
                     <input class="header__search input" type="search" id="search" placeholder="Search">
                 </form>
             </div>
-            <ul class="header__list">
-                <li class="header__item">
+            <ul class="header__flex">
+                <li class="header__flex">
                     <button class="header__button button" type="button">
                         <img src="./img/ic/burger-ic.svg" alt="burger-icon">
-                        <!-- <div class="header__overlay"></div> -->
                     </button>
                     <nav class="header__nav">
                         <div class="header__close">
@@ -40,8 +37,8 @@
                             </svg>
                         </div>
                         <h2 class="header__title">menu</h2>
-                        <ul class="header__nav-list">
-                            <li class="header__nav-item nav-sub">
+                        <ul>
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">man</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -58,7 +55,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">woman</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -78,7 +75,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">kids</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -104,17 +101,16 @@
                         </ul>
                     </nav>
                 </li>
-                <li class="header__item">
-                    <a class="header__link button" href="#"><img class="" src="./img/ic/profile-ic.svg"
-                            alt="profile-icon"></a>
+                <li class="header__flex">
+                    <a class="header__link button" href="#"><img src="./img/ic/profile-ic.svg" alt="profile-icon"></a>
                 </li>
-                <li class="header__item">
+                <li class="header__flex">
                     <a class="header__link button" href="#"><img src="./img/ic/basket-ic.svg" alt="basket-icon"></a>
                 </li>
             </ul>
-
         </div>
     </header>
+
     <main>
         <section class="page-name">
             <div class="container">
@@ -122,65 +118,68 @@
             </div>
         </section>
         <div class="container">
-            <section class="loyalty">
-                <form class="loyalty__form" action="#">
-                    <fieldset class="loyalty__fieldset">
-                        <legend class="loyalty__legend">Your Name</legend>
+            <section class="registration">
+                <form class="registration__form" action="#">
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__legend">Your Name</legend>
                         <label class="visually-hidden" for="first-name">First Name</label>
-                        <input class="loyalty__input input" type="text" id="first-name" required
+                        <input class="registration__input input" type="text" id="first-name" required
                             placeholder="First Name">
                         <label class="visually-hidden" for="last-name">Last Name</label>
-                        <input class="loyalty__input input" type="text" id="last-name" required placeholder="Last Name">
-                        <div class="loyalty__radio">
+                        <input class="registration__input input" type="text" id="last-name" required
+                            placeholder="Last Name">
+                        <div class="registration__radio">
                             <label class="visually-hidden" for="male">Male</label>
-                            <input class="loyalty__input-radio" type="radio" id="male" name="gender" required>Male
+                            <input class="registration__input-radio" type="radio" id="male" name="gender" required>Male
                             <label class="visually-hidden" for="female">Female</label>
-                            <input class="loyalty__input-radio" type="radio" id="female" name="gender">Female
+                            <input class="registration__input-radio" type="radio" id="female" name="gender">Female
                         </div>
                     </fieldset>
-                    <fieldset class="loyalty__fieldset">
-                        <legend class="loyalty__legend">Login details</legend>
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__legend">Login details</legend>
                         <label class="visually-hidden" for="email">email</label>
-                        <input class="loyalty__input input" type="email" id="email" required placeholder="Email">
+                        <input class="registration__input input" type="email" id="email" required placeholder="Email">
                         <label class="visually-hidden" for="password">Password</label>
-                        <input class="loyalty__input input" type="password" id="password" required
+                        <input class="registration__input input" type="password" id="password" required
                             placeholder="Password">
-                        <p class="loyalty__text-form">Please use 8 or more characters, with at least 1 number and a
+                        <p class="registration__text-form">Please use 8 or more characters, with at least 1 number and a
                             mixture
                             of uppercase and lowercase
                             letters</p>
                     </fieldset>
-                    <button class="loyalty__button" type="submit">join now</button>
+                    <button class="registration__button" type="submit">join now</button>
                 </form>
-                <div class="loyalty__wrp">
-                    <h2 class="loyalty__title">loyalty has its perks</h2>
-                    <p class="loyalty__text">Get in on the loyalty program where you can earn points and unlock serious
+                <div class="registration__wrp">
+                    <h2 class="registration__title">loyalty has its perks</h2>
+                    <p class="registration__text">Get in on the loyalty program where you can earn points and unlock
+                        serious
                         perks.
                         Starting with these as soon as you join:</p>
-                    <ul class="loyalty__list">
-                        <li class="loyalty__item">
-                            <p class="loyalty__text-sub">15% off welcome offer
+                    <ul>
+                        <li class="registration__item">
+                            <p class="registration__text-sub">15% off welcome offer
                             </p>
                         </li>
-                        <li class="loyalty__item">
-                            <p class="loyalty__text-sub">Free shipping, returns and exchanges on all orders
+                        <li class="registration__item">
+                            <p class="registration__text-sub">Free shipping, returns and exchanges on all orders
                             </p>
                         </li>
-                        <li class="loyalty__item">
-                            <p class="loyalty__text-sub">$10 off a purchase on your birthday
+                        <li class="registration__item">
+                            <p class="registration__text-sub">$10 off a purchase on your birthday
                             </p>
                         </li>
-                        <li class="loyalty__item">
-                            <p class="loyalty__text-sub">Early access to products</p>
+                        <li class="registration__item">
+                            <p class="registration__text-sub">Early access to products</p>
                         </li>
-                        <li class="loyalty__item">
-                            <p class="loyalty__text-sub">Exclusive offers & rewards</p>
+                        <li class="registration__item">
+                            <p class="registration__text-sub">Exclusive offers & rewards</p>
                         </li>
                     </ul>
                 </div>
             </section>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer__bkg-img">
             <div class="footer__wrp-feedback container">
