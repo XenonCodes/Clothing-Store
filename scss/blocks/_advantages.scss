@@ -1,0 +1,30 @@
+.advantages {
+    background-color: $black;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 360px;
+        text-align: center;
+        padding: 103px 20px;
+        box-sizing: border-box;
+    }
+
+    &__img {
+        height: 35px;
+    }
+
+    &__title {
+        color: $white;
+        @include font(20px, 24px, 400);
+        margin: 28px 0 16px;
+    }
+
+    &__text {
+        color: $gray;
+        @include font($font-weight: 300);
+    }
+}

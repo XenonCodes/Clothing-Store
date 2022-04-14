@@ -18,19 +18,28 @@
 
     <header class="header">
         <div class="container header__wrp">
-            <div>
-                <img class="header__logo" src="./img/logo.png" alt="logo-icon">
-                <img class="header__loupe button" src="./img/ic/loupe-ic.svg" alt="loupe-icon">
+            <div class="header__flex">
+                <a class="header__logo button" href="#"><img src="./img/logo.png" alt="logo-icon"></a>
+                <form class="header__form" action="#">
+                    <label class="visually-hidden" for="search">Search</label>
+                    <input class="header__search input" type="search" id="search" placeholder="Search">
+                </form>
             </div>
-            <ul class="header__list">
-                <li class="header__item">
+            <ul class="header__flex">
+                <li class="header__flex">
                     <button class="header__button button" type="button">
                         <img src="./img/ic/burger-ic.svg" alt="burger-icon">
                     </button>
                     <nav class="header__nav">
+                        <div class="header__close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                                <path
+                                    d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z" />
+                            </svg>
+                        </div>
                         <h2 class="header__title">menu</h2>
-                        <ul class="header__nav-list">
-                            <li class="header__nav-item nav-sub">
+                        <ul>
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">man</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -47,7 +56,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">woman</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -67,7 +76,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="header__nav-item nav-sub">
+                            <li class="nav-sub">
                                 <a class="nav-sub__title link" href="#">kids</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
@@ -93,21 +102,20 @@
                         </ul>
                     </nav>
                 </li>
-                <li class="header__item">
-                    <a class="header__link button" href="#"><img class="" src="./img/ic/profile-ic.svg"
+                <li class="header__flex">
+                    <a class="header__link button" href="./registration.html"><img src="./img/ic/profile-ic.svg"
                             alt="profile-icon"></a>
                 </li>
-                <li class="header__item">
+                <li class="header__flex">
                     <a class="header__link button" href="#"><img src="./img/ic/basket-ic.svg" alt="basket-icon"></a>
                 </li>
             </ul>
-
         </div>
     </header>
 
     <main>
         <section class="brand">
-            <img class="brand__img" src="./img/man.jpg" alt="man">
+            <img src="./img/man.jpg" alt="man">
             <div class="brand__title-wrp">
                 <h1 class="brand__title">the brand <span class="brand__subtitle">of luxerious <span
                             class="brand__subtitle-pink">fashion</span></span> </h1>
@@ -277,7 +285,7 @@
 
     <footer class="footer">
         <div class="footer__bkg-img">
-            <div class="footer__wrp-up container">
+            <div class="footer__wrp-feedback container">
                 <div class="footer__feedback">
                     <img src="./img/face.png" alt="face-woman">
                     <p class="footer__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
@@ -293,7 +301,7 @@
                 </form>
             </div>
         </div>
-        <div class="footer__wrp-down container">
+        <div class="footer__wrp-copyright container">
             <p class="footer__copyright">© 2021 Brand All Rights Reserved.</p>
             <ul class="footer__list">
                 <li class="footer__item"><a class="button" href="#"><img src="./img/ic/facebook-ic.svg"

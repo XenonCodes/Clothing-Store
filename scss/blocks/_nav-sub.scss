@@ -1,0 +1,25 @@
+.nav-sub {
+    &__title {
+        color: $dark-pink;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__list {
+        margin: 12px 20px 20px;
+    }
+
+    &__item {
+        margin: 11px 0;
+    }
+
+    &__link {
+        color: $gray;
+        text-decoration: none;
+    }
+}
