@@ -8,6 +8,10 @@
     &__text {
         color: $gray;
         margin: 0 0 48px 0;
+
+        @include tablet {
+            margin: 0 0 66px 0;
+        }
     }
 
     &__list {
@@ -21,6 +25,10 @@
         min-height: 581px;
         background-color: $products-bkg-color;
         margin: 0 0 30px 0;
+
+        @include tablet {
+            margin: 0 0 16px 0;
+        }
     }
 
     &__overlay-wrp {
@@ -73,6 +81,7 @@
 
     &__img {
         min-height: 420px;
+        width: 100%;
     }
 
     &__heading {
@@ -100,8 +109,12 @@
         color: $dark-pink;
         border: 1px solid $dark-pink;
         margin: 18px auto 95px;
-        padding: 14px 38px;
+        padding: 14px 15px;
         box-sizing: border-box;
+
+        @include tablet {
+            margin: 25px auto 65px;
+        }
 
         &:hover,
         &:focus {

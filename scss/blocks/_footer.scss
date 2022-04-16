@@ -2,7 +2,6 @@
     background-color: $black;
 
     &__bkg-img {
-        min-height: 448px;
         background-color: $light-pink;
         background-image: url(../img/section-forma-bg.jpg);
         background-size: cover;
@@ -13,6 +12,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            min-height: 693px;
+            padding: 64px 0 140px;
+            box-sizing: border-box;
+        }
+
+        @include mobile {
+            min-height: 550px;
+            padding: 64px 0 109px;
+        }
     }
 
     &__feedback {
@@ -23,6 +34,14 @@
         padding: 20px;
         box-sizing: border-box;
         text-align: center;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__text {
@@ -34,6 +53,10 @@
         width: 557px;
         text-align: center;
         text-transform: uppercase;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -43,6 +66,15 @@
     &__text-sub {
         @include font(18px, 28px);
         margin: 0 0 32px;
+
+        @include tablet {
+            margin: 0 0 27px;
+        }
+
+        @include mobile {
+            @include font(14px, 21px);
+            margin: 0 0 22px;
+        }
     }
 
     &__input {
@@ -79,6 +111,11 @@
         justify-content: space-between;
         align-items: center;
         min-height: 79px;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            padding: 43px 0 9px;
+        }
     }
 
     &__list {

@@ -2,12 +2,41 @@
     display: flex;
     margin: 0 0 64px 0;
 
+    @include tablet {
+        margin: 0 0 20px 0;
+    }
+
+    @include mobile {
+        min-height: 370px;
+        margin: 0 0 64px 0;
+    }
+
+    &__img {
+        width: 50%;
+        object-fit: cover;
+
+        @include tablet {
+            min-height: 370px;
+            width: 50%;
+            object-fit: cover;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
     &__title-wrp {
         background-color: $light-pink;
         display: flex;
         align-items: center;
         flex-grow: 1;
         padding: 0 0 0 92px;
+
+        @include mobile {
+            justify-content: center;
+            padding: 0;
+        }
     }
 
     &__title {
@@ -15,6 +44,14 @@
         z-index: 1;
         @include font(48px, 58px, 900);
         text-transform: uppercase;
+
+        @include tablet {
+            @include font(44px, 52px, 900)
+        }
+
+        @include mobile {
+            @include font(38px, 45px, 900)
+        }
 
         &:before {
             position: absolute;
@@ -29,7 +66,15 @@
 
     &__subtitle {
         display: block;
-        @include font(32px, 44px, 700);
+        @include font(32px, 38px, 700);
+
+        @include tablet {
+            @include font(24px, 28px, 700)
+        }
+
+        @include mobile {
+            @include font(20px, 24px, 700)
+        }
     }
 
     &__subtitle-pink {

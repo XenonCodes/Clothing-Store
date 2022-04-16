@@ -3,8 +3,21 @@
     justify-content: space-between;
     margin: 64px 0 96px;
 
+    @include tablet {
+        margin: 40px 0 96px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+
     &__form {
         width: 360px;
+
+        @include tablet {
+            width: 100%;
+            margin: 0 22px 0 0;
+        }
     }
 
     &__fieldset {
@@ -45,6 +58,10 @@
         border: none;
         text-transform: uppercase;
 
+        @include mobile {
+            margin: 0 0 40px;
+        }
+
         &:active {
             background-color: $black-pink;
         }
@@ -64,28 +81,46 @@
 
     &__wrp {
         width: 652px;
+
+        @include tablet {
+            width: 100%;
+        }
     }
 
     &__title {
         @include font(24px, 29px, 300);
         text-transform: uppercase;
+
+        @include tablet {
+            @include font(16px, 19px, 300);
+        }
     }
 
     &__text {
         @include font(24px, 29px, 300);
         margin: 22px 0;
+
+        @include tablet {
+            @include font(16px, 19px, 300);
+            margin: 32px 0 22px;
+        }
     }
 
     &__item {
+        display: flex;
         margin: 16px 0;
+
+        &:before {
+            content: url(../img/ic/check-ic.svg);
+            margin: 0 23px 0 0;
+        }
     }
 
     &__text-sub {
         @include font(24px, 29px, 300);
 
-        &:before {
-            content: url(../img/ic/check-ic.svg);
-            margin: 0 23px 0 0;
+        @include tablet {
+            @include font(16px, 19px, 300);
         }
     }
 }
