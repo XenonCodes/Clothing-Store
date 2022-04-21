@@ -16,6 +16,10 @@
     &__logo {
         margin: 0 41px 0 0;
 
+        @include mobile {
+            margin: 0 24px 0 0;
+        }
+
         &:focus {
             opacity: 0.5;
             cursor: pointer;
@@ -55,6 +59,10 @@
         height: 30px;
         border-radius: 17px;
         padding: 15px 35px;
+
+        @include mobile {
+            padding: 15px 0px 15px 31px;
+        }
     }
 
     &__button {
@@ -75,6 +83,10 @@
 
     &__link {
         margin: 0 0 0 34px;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__nav {
@@ -89,6 +101,15 @@
         box-sizing: border-box;
         background-color: $white;
         box-shadow: 0 0 21px $shadow;
+
+        @include tablet {
+            left: 512px;
+            height: 632px;
+        }
+
+        @include mobile {
+            left: 120px;
+        }
     }
 
     &__title {

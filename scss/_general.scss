@@ -19,6 +19,14 @@ body {
 .container {
     max-width: 1140px;
     margin: auto;
+
+    @include tablet {
+        width: 734px;
+    }
+
+    @include mobile {
+        width: 343px;
+    }
 }
 
 .link:hover,

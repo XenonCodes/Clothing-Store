@@ -18,16 +18,31 @@
         box-sizing: border-box;
         text-transform: uppercase;
 
+        @include tablet {
+            width: 232px;
+            min-height: 167px;
+            margin: 0 0 20px;
+        }
+
+        @include mobile {
+            width: 100%;
+            min-height: 247px;
+            margin: 0 0 32px;
+        }
+
         &--woman {
             background-image: url(../img/sales-woman-bkg.jpg);
+            background-size: cover;
         }
 
         &--men {
             background-image: url(../img/sales-man-bkg.jpg);
+            background-size: cover;
         }
 
         &--kids {
             background-image: url(../img/sales-kids-bkg.jpg);
+            background-size: cover;
         }
 
         &--accesories {
@@ -35,12 +50,23 @@
             min-height: 180px;
             background-image: url(../img/sales-accessories-bkg.jpg);
             margin: 0 0 97px;
+            background-size: cover;
+
+            @include tablet {
+                min-height: 116px;
+                margin: 0 0 155px;
+            }
+
+            @include mobile {
+                margin: 0 0 64px;
+            }
         }
     }
 
     &__text {
         color: $white;
         @include font(16px, 19px);
+
     }
 
     &__title {
