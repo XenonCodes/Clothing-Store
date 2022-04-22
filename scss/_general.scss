@@ -17,15 +17,27 @@ body {
 }
 
 .container {
-    max-width: 1140px;
+    // 1140px
+    width: 71.25%;
     margin: auto;
 
     @include tablet {
-        width: 734px;
+        // 735px
+        width: 95.5%;
     }
 
     @include mobile {
-        width: 343px;
+        // 343px
+        width: 91.5%;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet-mid {
+        flex-direction: column;
     }
 }
 
