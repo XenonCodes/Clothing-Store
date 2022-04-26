@@ -5,14 +5,32 @@
     font-style: $font-style;
 }
 
+@mixin tablet-mid {
+    @media (max-width: $tablet-mid-width) {
+        @content;
+    }
+}
+
 @mixin tablet {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin mobile-tablet-mid {
+    @media (max-width: $mobile-tablet-mid-width) {
+        @content;
+    }
+}
+
+@mixin mobile-mid {
+    @media (max-width: $mobile-mid-width) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $mobile-width) {
         @content;
     }
 }

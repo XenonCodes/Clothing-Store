@@ -11,6 +11,7 @@
 
     &__flex {
         display: flex;
+        position: relative;
     }
 
     &__logo {
@@ -58,10 +59,16 @@
         transform: translate(0, -50%);
         height: 30px;
         border-radius: 17px;
-        padding: 15px 35px;
+        width: 239px;
+        padding: 0 35px;
+
+        @include mobile-tablet-mid {
+            width: 150px;
+        }
 
         @include mobile {
-            padding: 15px 0px 15px 31px;
+            width: 144px;
+            padding: 0 0 0 27px;
         }
     }
 
@@ -79,12 +86,18 @@
         position: absolute;
         top: 20px;
         right: 20px;
+        width: 18px;
+        height: 18px;
+        border: none;
+        background-color: transparent;
+        background-image: url(../img/ic/close-ic.svg);
+        background-size: 18px 18px;
     }
 
     &__link {
         margin: 0 0 0 34px;
 
-        @include mobile {
+        @include mobile-mid {
             display: none;
         }
     }
@@ -93,8 +106,8 @@
         z-index: 3;
         display: none;
         position: absolute;
-        top: 75px;
-        left: 970px;
+        top: 53px;
+        left: 0;
         height: 765px;
         width: 230px;
         padding: 35px;
@@ -102,13 +115,13 @@
         background-color: $white;
         box-shadow: 0 0 21px $shadow;
 
-        @include tablet {
-            left: 512px;
+        @include tablet-mid {
+            left: -46px;
             height: 632px;
         }
 
-        @include mobile {
-            left: 120px;
+        @include mobile-mid {
+            left: -178px;
         }
     }
 

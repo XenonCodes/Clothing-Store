@@ -7,12 +7,12 @@
         margin: 40px 0 96px;
     }
 
-    @include mobile {
+    @include mobile-mid {
         flex-direction: column;
     }
 
     &__form {
-        width: 360px;
+        width: 31.6%;
 
         @include tablet {
             width: 100%;
@@ -58,7 +58,7 @@
         border: none;
         text-transform: uppercase;
 
-        @include mobile {
+        @include mobile-mid {
             margin: 0 0 40px;
         }
 
@@ -80,7 +80,7 @@
     }
 
     &__wrp {
-        width: 652px;
+        width: 57.2%;
 
         @include tablet {
             width: 100%;

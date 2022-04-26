@@ -22,7 +22,9 @@
 
     &__item {
         max-width: 360px;
+        padding: 0 10px;
         text-align: center;
+        box-sizing: border-box;
 
         @include tablet {
             margin: 24px 0;

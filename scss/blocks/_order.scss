@@ -1,0 +1,119 @@
+.order {
+    width: 31.6%;
+    margin: 96px 0 57px;
+
+    @include tablet-mid {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 128px;
+    }
+
+    @include mobile-tablet-mid {
+        flex-direction: column;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 57px;
+
+        @include tablet-mid {
+            width: 48.9%;
+            margin: 0;
+        }
+
+        @include mobile-tablet-mid {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include font(16px, 19px, 300);
+        text-transform: uppercase;
+
+        &--total {
+            @include font(16px, 19px, 300);
+            margin: 12px 0 21px;
+        }
+
+        &--pink {
+            @include font(16px, 19px, 700);
+            color: $dark-pink;
+            margin: 0 0 0 20px;
+        }
+    }
+
+    &__input {
+        height: 45px;
+        margin: 10px 0;
+        padding: 0 16px;
+    }
+
+    &__button {
+        color: $gray;
+        max-width: 100px;
+        padding: 10px 10px;
+        border: 1px solid $light-gray;
+        background-color: transparent;
+        @include font(11px, 13px, 300);
+        text-transform: uppercase;
+        margin: 10px 0 0;
+
+        &:hover,
+        &:focus {
+            color: #FFFFFF;
+            background-color: $dark-pink;
+            box-shadow: 5px 5px 10px 2px $shadow;
+            cursor: pointer;
+            border: none;
+        }
+    }
+
+    &__wrp {
+        text-align: right;
+        background-color: $products-bkg-color;
+        padding: 39px 44px 42px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+
+        @include tablet-mid {
+            width: 48.9%;
+            max-height: 250px;
+        }
+
+        @include mobile-tablet-mid {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        @include font(11px, 13px);
+
+        &--sub {
+            margin: 0 0 0 20px;
+        }
+    }
+
+    &__link {
+        @include font(16px, 19px, 300);
+        text-align: center;
+        max-width: 273px;
+        display: block;
+        text-decoration: none;
+        color: #F26376;
+        border: 1px solid #F26376;
+        margin: 17px auto 0;
+        padding: 15px 10px;
+        box-sizing: border-box;
+
+        &:hover,
+        &:focus {
+            color: #FFFFFF;
+            background-color: #F26376;
+            box-shadow: 5px 5px 10px 2px #00000066;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
