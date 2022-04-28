@@ -124,7 +124,7 @@
         align-items: center;
         min-height: 79px;
 
-        @include mobile {
+        @include mobile-mid {
             flex-direction: column-reverse;
             padding: 43px 0 9px;
         }

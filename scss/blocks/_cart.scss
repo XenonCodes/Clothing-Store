@@ -1,6 +1,7 @@
 .cart {
     margin: 96px 0 128px;
     width: 57.2%;
+    max-width: 900px;
 
     @include tablet-mid {
         margin: 59px 0 64px;
@@ -28,17 +29,17 @@
         background-color: transparent;
         position: absolute;
         background-image: url(../img/ic/close-ic.svg);
-        background-size: 18px 18px;
+        background-size: 100%;
     }
 
     &__title {
         @include font(24px, 28px);
         text-transform: uppercase;
-        margin: 22px 26px 42px 31px;
+        margin: 22px 26px 42px 0;
 
         @include mobile-mid {
             @include font(16px, 19px);
-            margin: 14px 26px 25px 17px;
+            margin: 14px 26px 25px 0;
         }
     }
 
@@ -57,16 +58,34 @@
         @include mobile-mid {
             @include font(14px, 17px);
         }
-    }
 
-    &__text-pink {
-        color: $dark-pink;
-    }
+        &--price {
+            &::after {
+                content: "$300";
+                color: $dark-pink;
+            }
+        }
 
-    &__text-num {
-        margin: 0 0 0 20px;
-        padding: 0 15px;
-        border: 1px solid $light-gray;
+        &--color {
+            &::after {
+                content: "Red";
+            }
+        }
+
+        &--size {
+            &::after {
+                content: "Xl";
+            }
+        }
+
+        &--quantity {
+            &::after {
+                content: "2";
+                margin: 0 0 0 20px;
+                padding: 0 15px;
+                border: 1px solid $light-gray;
+            }
+        }
     }
 
     &__wrp {
@@ -86,6 +105,7 @@
         @include font($font-weight:300);
         text-transform: uppercase;
         margin: 32px 0 0;
+        outline: none;
 
         @include mobile-tablet-mid {
             padding: 17px 15px;
