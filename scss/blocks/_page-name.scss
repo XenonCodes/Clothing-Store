@@ -1,6 +1,12 @@
 .page-name {
     background-color: $light-pink;
 
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__title {
         color: $dark-pink;
         @include font(24px, 29px);
@@ -29,5 +35,15 @@
         @include mobile {
             text-align: center;
         }
+    }
+
+    &__list {
+        text-transform: uppercase;
+        color: $dark-pink;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $gray;
     }
 }

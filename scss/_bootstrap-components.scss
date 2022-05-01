@@ -1,0 +1,85 @@
+.bg-white-light {
+    background-color: $products-bkg-color !important;
+}
+
+.carousel-control-prev-my,
+.carousel-control-next-my {
+    position: absolute;
+    top: 45%;
+    bottom: 48%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+.carousel-control-prev-my {
+    justify-content: flex-start;
+}
+
+.carousel-control-next-my {
+    justify-content: flex-end;
+}
+
+.carousel-control-prev-my:hover>.icon,
+.carousel-control-prev-my:focus>.icon,
+.carousel-control-next-my:hover>.icon,
+.carousel-control-next-my:focus>.icon {
+    color: $dark-pink;
+}
+
+.carousel-control-prev-my {
+    left: 0;
+}
+
+.carousel-control-next-my {
+    right: 0;
+}
+
+.btn-transparent {
+    color: $black;
+    text-transform: uppercase;
+}
+
+.btn-transparent:hover {
+    color: $white;
+    background-color: $dark-pink;
+}
+
+.btn-check:focus+.btn-transparent,
+.btn-transparent:focus {
+    color: $white;
+    background-color: $dark-pink;
+    box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-check:checked+.btn-transparent,
+.btn-check:active+.btn-transparent,
+.btn-transparent:active,
+.btn-transparent.active,
+.show>.btn-transparent.dropdown-toggle {
+    color: $black;
+    background-color: #565e64;
+    border-color: #51585e;
+}
+
+.btn-check:checked+.btn-transparent:focus,
+.btn-check:active+.btn-transparent:focus,
+.btn-transparent:active:focus,
+.btn-transparent.active:focus,
+.show>.btn-transparent.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-transparent:disabled,
+.btn-transparent.disabled {
+    color: $black;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}

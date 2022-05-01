@@ -1,6 +1,11 @@
 .products {
     text-align: center;
 
+    &--new-arrival {
+        margin: 664px 0 98px;
+        position: relative;
+    }
+
     &__title {
         @include font(30px, 36px);
     }

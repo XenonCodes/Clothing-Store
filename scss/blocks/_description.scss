@@ -1,0 +1,71 @@
+.description {
+    text-align: center;
+    border: 1px solid $light-gray;
+    position: absolute;
+    top: -720px;
+    background-color: $white;
+
+    &__wrp {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__text {
+        @include font ($font-weight: 300);
+        margin: 48px 0 32px;
+
+        &--chapter {
+            margin: 64px 0 0;
+            text-transform: uppercase;
+            color: $dark-pink;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $dark-pink;
+                top: 29px;
+                left: 45%;
+                right: 45%;
+                bottom: -15px;
+            }
+        }
+    }
+
+    &__title {
+        margin: 27px;
+        @include font (18px, 22px, 300);
+        text-transform: uppercase;
+    }
+
+    &__price {
+        @include font (24px, 29px, 300);
+        margin: 0 0 65px;
+        color: $dark-pink;
+    }
+
+    &__button {
+        width: 211px;
+        display: block;
+        text-decoration: none;
+        color: $dark-pink;
+        border: 1px solid $dark-pink;
+        background: transparent;
+        margin: 49px auto 65px;
+        padding: 14px 15px;
+        box-sizing: border-box;
+
+        @include tablet {
+            margin: 25px auto 65px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $white;
+            background-color: $dark-pink;
+            box-shadow: 5px 5px 10px 2px $shadow;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}

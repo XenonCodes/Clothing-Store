@@ -11,16 +11,12 @@
 
     @include mobile-tablet-mid {
         flex-direction: column;
+        margin: 0 0 96px;
     }
 
     &__form {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 57px;
-
         @include tablet-mid {
             width: 48.9%;
-            margin: 0;
         }
 
         @include mobile-tablet-mid {
@@ -28,20 +24,19 @@
         }
     }
 
-    &__title {
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 57px;
+
+        @include tablet-mid {
+            margin: 0;
+        }
+    }
+
+    &__legend {
         @include font(16px, 19px, 300);
         text-transform: uppercase;
-
-        &--total {
-            @include font(16px, 19px, 300);
-            margin: 12px 0 21px;
-        }
-
-        &--pink {
-            @include font(16px, 19px, 700);
-            color: $dark-pink;
-            margin: 0 0 0 20px;
-        }
     }
 
     &__input {
@@ -59,6 +54,11 @@
         @include font(11px, 13px, 300);
         text-transform: uppercase;
         margin: 10px 0 0;
+        outline: none;
+
+        @include mobile-tablet-mid {
+            margin: 10px 0 48px;
+        }
 
         &:hover,
         &:focus {
@@ -90,7 +90,20 @@
     &__text {
         @include font(11px, 13px);
 
-        &--sub {
+        &::after {
+            content: "$900";
+            margin: 0 0 0 20px;
+        }
+    }
+
+    &__title-total {
+        @include font(16px, 19px, 300);
+        margin: 12px 0 21px;
+
+        &::after {
+            content: "$900";
+            @include font(16px, 19px, 700);
+            color: $dark-pink;
             margin: 0 0 0 20px;
         }
     }

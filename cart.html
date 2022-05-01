@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сlothes shop</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -118,18 +114,20 @@
                     <li class="cart__flex">
                         <img class="cart__img" src="./img/product-3.jpg" alt="product-1">
                         <ul class="cart__list">
-                            <h2 class="cart__title">mango people t-shirt</h2>
                             <li class="cart__item">
-                                <p class="cart__text">Price: <span class="cart__text-pink">$300</span></p>
+                                <h2 class="cart__title">mango people t-shirt</h2>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Color: Red</p>
+                                <p class="cart__text cart__text--price">Price: </p>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Size: Xl</p>
+                                <p class="cart__text cart__text--color">Color: </p>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Quantity: <span class="cart__text-num">2</span></p>
+                                <p class="cart__text cart__text--size">Size: </p>
+                            </li>
+                            <li class="cart__item">
+                                <p class="cart__text cart__text--quantity">Quantity: </p>
                             </li>
                         </ul>
                         <button class="cart__close button" type="button"></button>
@@ -137,18 +135,20 @@
                     <li class="cart__flex">
                         <img class="cart__img" src="./img/product-4.jpg" alt="product-2">
                         <ul class="cart__list">
-                            <h2 class="cart__title">mango people t-shirt</h2>
                             <li class="cart__item">
-                                <p class="cart__text">Price: <span class="cart__text-pink">$300</span></p>
+                                <h2 class="cart__title">mango people t-shirt</h2>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Color: Red</p>
+                                <p class="cart__text cart__text--price">Price: </p>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Size: Xl</p>
+                                <p class="cart__text cart__text--color">Color: </p>
                             </li>
                             <li class="cart__item">
-                                <p class="cart__text">Quantity: <span class="cart__text-num">2</span></p>
+                                <p class="cart__text cart__text--size">Size: </p>
+                            </li>
+                            <li class="cart__item">
+                                <p class="cart__text cart__text--quantity">Quantity: </p>
                             </li>
                         </ul>
                         <button class="cart__close button" type="button"></button>
@@ -161,18 +161,21 @@
             </section>
             <section class="order">
                 <form class="order__form" action="#">
-                    <h2 class="order__title">shipping adress</h2>
-                    <lebel class="visually-hidden" for="сity">сity</lebel>
-                    <input class="order__input input" type="text" id="сity" required placeholder="Bangladesh">
-                    <lebel class="visually-hidden" for="state">state</lebel>
-                    <input class="order__input input" type="text" id="state" required placeholder="State">
-                    <lebel class="visually-hidden" for="postcode">postcode</lebel>
-                    <input class="order__input input" type="text" id="postcode" required placeholder="Postcode / Zip">
-                    <button class="order__button" type="submit">get a quote</button>
+                    <fieldset class="order__fieldset">
+                        <legend class="order__legend">shipping adress</legend>
+                        <label class="visually-hidden" for="сity">City</label>
+                        <input class="order__input input" type="text" id="сity" required placeholder="Bangladesh">
+                        <label class="visually-hidden" for="state">State</label>
+                        <input class="order__input input" type="text" id="state" required placeholder="State">
+                        <label class="visually-hidden" for="postcode">Postcode</label>
+                        <input class="order__input input" type="text" id="postcode" required
+                            placeholder="Postcode / Zip">
+                        <button class="order__button" type="submit">get a quote</button>
+                    </fieldset>
                 </form>
                 <div class="order__wrp">
-                    <p class="order__text">sub total <span class="order__text--sub">$900</span></p>
-                    <h2 class="order__title--total">grand total <span class="order__title--pink">$900</span></h2>
+                    <p class="order__text">sub total</p>
+                    <h2 class="order__title-total">grand total</h2>
                     <hr>
                     <a class="order__link" href="#">proceed to checkout</a>
                 </div>

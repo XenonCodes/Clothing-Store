@@ -20,6 +20,7 @@ body {
     // 1140px
     width: 71.25%;
     margin: auto;
+    padding: 0;
 
     @include tablet {
         // 735px
@@ -45,6 +46,7 @@ body {
 .link:focus {
     color: $red;
     cursor: pointer;
+    outline: none;
 }
 
 .link:active {
@@ -67,4 +69,11 @@ body {
     outline: 0 solid $dark-pink;
     background: $light-pink;
     cursor: pointer;
+}
+
+.icon {
+    color: $black;
+    font-size: 21px;
+    background-color: $light-gray;
+    padding: 12px 18px;
 }
