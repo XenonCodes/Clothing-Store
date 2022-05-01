@@ -1,17 +1,22 @@
 .page-name {
     background-color: $light-pink;
+    height: 148px;
+    display: flex;
 
     &__wrp {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mobile-tablet-mid {
+            flex-direction: column;
+        }
     }
 
     &__title {
         color: $dark-pink;
         @include font(24px, 29px);
         text-transform: uppercase;
-        padding: 60px 0;
         box-sizing: border-box;
         animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 

@@ -19,14 +19,6 @@
     text-decoration: none;
 }
 
-.carousel-control-prev-my {
-    justify-content: flex-start;
-}
-
-.carousel-control-next-my {
-    justify-content: flex-end;
-}
-
 .carousel-control-prev-my:hover>.icon,
 .carousel-control-prev-my:focus>.icon,
 .carousel-control-next-my:hover>.icon,
@@ -40,6 +32,11 @@
 
 .carousel-control-next-my {
     right: 0;
+}
+
+.carousel-img {
+    width: 100%;
+    max-width: 597px;
 }
 
 .btn-transparent {
@@ -82,4 +79,16 @@
     color: $black;
     background-color: #6c757d;
     border-color: #6c757d;
+}
+
+.page-link {
+    padding: 0.375rem 0.45rem;
+}
+
+.fs-tablet-mob {
+    @include font ();
+
+    @include mobile-mid {
+        @include font(10px, 12px);
+    }
 }

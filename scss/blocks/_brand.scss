@@ -14,6 +14,7 @@
     &__img {
         width: 50%;
         object-fit: cover;
+        max-width: 800px;
 
         @include tablet {
             min-height: 370px;

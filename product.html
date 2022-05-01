@@ -31,7 +31,7 @@
                         <h2 class="header__title">menu</h2>
                         <ul>
                             <li class="nav-sub">
-                                <a class="nav-sub__title link" href="#">man</a>
+                                <a class="nav-sub__title link" href="./catalog.html">man</a>
                                 <ul class="nav-sub__list">
                                     <li class="nav-sub__item">
                                         <a class="nav-sub__link link" href="#">Accessories</a>
@@ -111,10 +111,11 @@
                 <div class="page-name__wrp">
                     <h1 class="page-name__title">new arrivals</h1>
                     <nav aria-label="breadcrumb">
-                        <ol class=" page-name__list breadcrumb">
+                        <ol class=" page-name__list breadcrumb m-0">
                             <li class="breadcrumb-item"><a class="page-name__link link" href="./index.html">home</a>
                             </li>
-                            <li class="breadcrumb-item"><a class="page-name__link link" href="#">men</a></li>
+                            <li class="breadcrumb-item"><a class="page-name__link link" href="./catalog.html">men</a>
+                            </li>
                             <li class="breadcrumb-item" aria-current="page">new arrivals</li>
                         </ol>
                     </nav>
@@ -124,24 +125,22 @@
         <div id="carouselExampleControls" class="carousel bg-white-light slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/product-7.jpg" class="d-block m-auto" alt="product">
+                    <img src="./img/product-7.jpg" class="d-block m-auto carousel-img" alt="product">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/product-7.jpg" class="d-block m-auto" alt="product">
+                    <img src="./img/product-7.jpg" class="d-block m-auto carousel-img" alt="product">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/product-7.jpg" class="d-block m-auto" alt="product">
+                    <img src="./img/product-7.jpg" class="d-block m-auto carousel-img" alt="product">
                 </div>
             </div>
             <button class="carousel-control-prev-my" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev">
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
                 <i class="fa-solid fa-chevron-left icon"></i>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next-my" type="button" data-bs-target="#carouselExampleControls"
                 data-bs-slide="next">
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
                 <i class="fa-solid fa-angle-right icon"></i>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -159,9 +158,9 @@
                             competencies rather than exceptional portals. </p>
                         <p class="description__price">$561</p>
                         <hr class="m-0">
-                        <div class="d-sm-flex justify-content-center">
+                        <div class="d-flex justify-content-center">
                             <div class="dropdown">
-                                <button class="btn btn-transparent dropdown-toggle mt-5" type="button"
+                                <button class="btn btn-transparent dropdown-toggle mt-5 p-0 fs-tablet-mob" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     choose color
                                 </button>
@@ -172,8 +171,8 @@
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-transparent dropdown-toggle mx-1 mt-5" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-transparent dropdown-toggle mx-1 mt-5 p-0 fs-tablet-mob"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     choose size
                                 </button>
                                 <ul class="dropdown-menu">
@@ -183,7 +182,7 @@
                                 </ul>
                             </div>
                             <div class="dropdown">
-                                <button class="btn btn-transparent dropdown-toggle mt-5" type="button"
+                                <button class="btn btn-transparent dropdown-toggle mt-5 p-0 fs-tablet-mob" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     quantity
                                 </button>
@@ -215,7 +214,7 @@
                             <p class="products__price">$52.00</p>
                         </div>
                     </li>
-                    <li class="products__item">
+                    <li class="products__item products-grid__item--none">
                         <div class="products__overlay-wrp">
                             <img class="products__img" src="./img/product-2.jpg" alt="product-2">
                             <div class="products__overlay"></div>
