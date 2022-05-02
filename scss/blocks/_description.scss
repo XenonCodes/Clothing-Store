@@ -2,12 +2,20 @@
     text-align: center;
     border: 1px solid $light-gray;
     position: absolute;
-    top: -720px;
+    top: -710px;
     background-color: $white;
+
+    @include mobile-tablet-mid {
+        top: -690px;
+    }
 
     &__wrp {
         width: 50%;
         margin: 0 auto;
+
+        @include tablet {
+            width: 72%;
+        }
     }
 
     &__text {
@@ -28,6 +36,11 @@
                 left: 45%;
                 right: 45%;
                 bottom: -15px;
+
+                @include tablet-mid {
+                    left: 35%;
+                    right: 35%;
+                }
             }
         }
     }
@@ -42,10 +55,14 @@
         @include font (24px, 29px, 300);
         margin: 0 0 65px;
         color: $dark-pink;
+
+        @include mobile {
+            margin: 0 0 30px;
+        }
     }
 
     &__button {
-        width: 211px;
+        max-width: 211px;
         display: block;
         text-decoration: none;
         color: $dark-pink;
