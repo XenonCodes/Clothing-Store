@@ -1,13 +1,10 @@
 .description {
     text-align: center;
     border: 1px solid $light-gray;
-    position: absolute;
-    top: -710px;
+    position: relative;
+    width: 100%;
+    top: -65px;
     background-color: $white;
-
-    @include mobile-tablet-mid {
-        top: -690px;
-    }
 
     &__wrp {
         width: 50%;
@@ -71,6 +68,17 @@
         margin: 49px auto 65px;
         padding: 14px 15px;
         box-sizing: border-box;
+        display: flex;
+        align-items: center;
+
+        // &:before {
+        //     content: '';
+        //     width: 25px;
+        //     height: 25px;
+        //     background-size: 25px 25px;
+        //     background-image: url(../img/ic/basket-ic.svg);
+        //     margin: 0 22px 0 0;
+        // }
 
         @include tablet {
             margin: 25px auto 65px;

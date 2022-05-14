@@ -1,0 +1,96 @@
+.sort {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0;
+
+    @include tablet {
+        margin: 25px 0 0;
+    }
+
+    &__filter {
+        position: relative;
+    }
+
+    &__button {
+        z-index: 2;
+        position: relative;
+        text-decoration: none;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            color: $dark-pink;
+            fill: $dark-pink;
+        }
+
+        &:focus+.sort__nav {
+            display: flex;
+        }
+
+        &--nav {
+            position: relative;
+            @include font (14px, 17px, 400);
+            text-transform: uppercase;
+            border-bottom: 1px solid $light-gray ;
+            padding: 11px 0;
+            box-sizing: border-box;
+            margin: 20px 0 0 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -15px;
+                bottom: 0px;
+                width: 5px;
+                background-color: $dark-pink;
+            }
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        margin: 0 10px 0 0;
+        @include font(14px, 17px, 700);
+
+        &--none {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__ic {
+        @include mobile {
+            width: 37px;
+            height: 25px;
+        }
+    }
+
+    &__nav {
+        z-index: 1;
+        background-color: $white;
+        position: absolute;
+        top: -13px;
+        left: -16px;
+        display: none;
+        flex-direction: column;
+        padding: 46px 15px 15px;
+        box-sizing: border-box;
+        box-shadow: 4px 3px 27px 2px $shadow;
+        min-width: 360px;
+
+        @include mobile-mid {
+            min-width: 290px;
+        }
+
+        &:hover {
+            display: flex;
+        }
+    }
+}

@@ -76,7 +76,6 @@
         border: none;
         background-color: transparent;
 
-        &:hover+.header__nav,
         &:focus+.header__nav {
             display: block;
         }
@@ -114,6 +113,10 @@
         box-sizing: border-box;
         background-color: $white;
         box-shadow: 0 0 21px $shadow;
+
+        &:hover {
+            display: block;
+        }
 
         @include tablet-mid {
             left: -46px;

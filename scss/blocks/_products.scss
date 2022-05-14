@@ -2,7 +2,7 @@
     text-align: center;
 
     &--new-arrival {
-        margin: 664px 0 98px;
+        margin: 0 0 98px;
         position: relative;
     }
 
@@ -33,6 +33,21 @@
 
         &--none {
             @include tablet {
+                display: none;
+            }
+
+            @include mobile {
+                display: block;
+            }
+        }
+
+        &--none2 {
+
+            @include tablet {
+                order: -1;
+            }
+
+            @include mobile {
                 display: none;
             }
         }
@@ -110,6 +125,7 @@
     &__img {
         min-height: 254px;
         width: 100%;
+        vertical-align: middle;
 
         @include tablet-mid {
             min-height: 200px;

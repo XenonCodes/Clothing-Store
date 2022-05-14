@@ -88,7 +88,7 @@
 .btn-transparent:focus {
   color: #FFFFFF;
   background-color: #F26376;
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  box-shadow: 5px 5px 10px 2px #00000066;
 }
 
 .btn-check:checked + .btn-transparent,
@@ -221,6 +221,7 @@ video {
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  line-height: normal;
 }
 
 article,
@@ -429,7 +430,6 @@ body {
   background-color: transparent;
 }
 
-.header__button:hover + .header__nav,
 .header__button:focus + .header__nav {
   display: block;
 }
@@ -468,6 +468,10 @@ body {
   box-sizing: border-box;
   background-color: #FFFFFF;
   box-shadow: 0 0 21px #00000066;
+}
+
+.header__nav:hover {
+  display: block;
 }
 
 @media (max-width: 1350px) {
@@ -694,6 +698,12 @@ body {
   }
 }
 
+@media (max-width: 573px) {
+  .page-name__title {
+    margin: 0 0 32px;
+  }
+}
+
 @media (max-width: 375px) {
   .page-name__title {
     text-align: center;
@@ -833,7 +843,7 @@ body {
 }
 
 .products--new-arrival {
-  margin: 664px 0 98px;
+  margin: 0 0 98px;
   position: relative;
 }
 
@@ -870,6 +880,24 @@ body {
 
 @media (max-width: 767px) {
   .products__item--none {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .products__item--none {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .products__item--none2 {
+    order: -1;
+  }
+}
+
+@media (max-width: 375px) {
+  .products__item--none2 {
     display: none;
   }
 }
@@ -953,6 +981,7 @@ body {
 .products__img {
   min-height: 254px;
   width: 100%;
+  vertical-align: middle;
 }
 
 @media (max-width: 1350px) {
@@ -1022,7 +1051,7 @@ body {
 }
 
 .products-grid__list {
-  margin: 134px 0 0;
+  margin: 65px 0 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
@@ -1031,7 +1060,7 @@ body {
 
 @media (max-width: 767px) {
   .products-grid__list {
-    margin: 81px 0 0;
+    margin: 40px 0 0;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 16px;
     grid-row-gap: 16px;
@@ -1113,6 +1142,7 @@ body {
 
 .products-grid__img {
   width: 100%;
+  vertical-align: middle;
 }
 
 .products-grid__heading {
@@ -1142,18 +1172,119 @@ body {
   font-style: normal;
 }
 
+.sort {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0;
+}
+
+@media (max-width: 767px) {
+  .sort {
+    margin: 25px 0 0;
+  }
+}
+
+.sort__filter {
+  position: relative;
+}
+
+.sort__button {
+  z-index: 2;
+  position: relative;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.sort__button:hover, .sort__button:focus {
+  color: #F26376;
+  fill: #F26376;
+}
+
+.sort__button:focus + .sort__nav {
+  display: flex;
+}
+
+.sort__button--nav {
+  position: relative;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 11px 0;
+  box-sizing: border-box;
+  margin: 20px 0 0 20px;
+}
+
+.sort__button--nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -15px;
+  bottom: 0px;
+  width: 5px;
+  background-color: #F26376;
+}
+
+.sort__text {
+  text-transform: uppercase;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media (max-width: 375px) {
+  .sort__text--none {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .sort__ic {
+    width: 37px;
+    height: 25px;
+  }
+}
+
+.sort__nav {
+  z-index: 1;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: -13px;
+  left: -16px;
+  display: none;
+  flex-direction: column;
+  padding: 46px 15px 15px;
+  box-sizing: border-box;
+  box-shadow: 4px 3px 27px 2px #00000066;
+  min-width: 360px;
+}
+
+@media (max-width: 450px) {
+  .sort__nav {
+    min-width: 290px;
+  }
+}
+
+.sort__nav:hover {
+  display: flex;
+}
+
 .description {
   text-align: center;
   border: 1px solid #E1E1E1;
-  position: absolute;
-  top: -710px;
+  position: relative;
+  width: 100%;
+  top: -65px;
   background-color: #FFFFFF;
-}
-
-@media (max-width: 573px) {
-  .description {
-    top: -690px;
-  }
 }
 
 .description__wrp {
@@ -1233,6 +1364,8 @@ body {
   margin: 49px auto 65px;
   padding: 14px 15px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
