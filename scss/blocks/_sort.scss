@@ -28,6 +28,7 @@
             fill: $dark-pink;
         }
 
+        &:hover+.sort__nav,
         &:focus+.sort__nav {
             display: flex;
         }

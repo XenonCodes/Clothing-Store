@@ -76,6 +76,7 @@
         border: none;
         background-color: transparent;
 
+        &:hover+.header__nav,
         &:focus+.header__nav {
             display: block;
         }
