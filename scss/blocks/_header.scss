@@ -115,6 +115,10 @@
         background-color: $white;
         box-shadow: 0 0 21px $shadow;
 
+        &:hover {
+            display: block;
+        }
+
         @include tablet-mid {
             left: -46px;
             height: 632px;

@@ -2,14 +2,14 @@
     text-align: center;
 
     &__list {
-        margin: 134px 0 0;
+        margin: 65px 0 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 30px;
 
         @include tablet {
-            margin: 81px 0 0;
+            margin: 40px 0 0;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 16px;
             grid-row-gap: 16px;
@@ -87,6 +87,7 @@
 
     &__img {
         width: 100%;
+        vertical-align: middle;
     }
 
     &__heading {

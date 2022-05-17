@@ -1,5 +1,5 @@
 .bg-white-light {
-    background-color: $products-bkg-color !important;
+    background-color: $products-bkg-color  !important;
 }
 
 .carousel-control-prev-my,
@@ -53,7 +53,7 @@
 .btn-transparent:focus {
     color: $white;
     background-color: $dark-pink;
-    box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+    box-shadow: 5px 5px 10px 2px $shadow;
 }
 
 .btn-check:checked+.btn-transparent,

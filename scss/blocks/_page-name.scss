@@ -37,6 +37,10 @@
             }
         }
 
+        @include mobile-tablet-mid {
+            margin: 0 0 32px;
+        }
+
         @include mobile {
             text-align: center;
         }
