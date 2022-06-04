@@ -430,11 +430,6 @@ body {
   background-color: transparent;
 }
 
-.header__button:hover + .header__nav,
-.header__button:focus + .header__nav {
-  display: block;
-}
-
 .header__close {
   position: absolute;
   top: 20px;
@@ -469,10 +464,6 @@ body {
   box-sizing: border-box;
   background-color: #FFFFFF;
   box-shadow: 0 0 21px #00000066;
-}
-
-.header__nav:hover {
-  display: block;
 }
 
 @media (max-width: 1350px) {
