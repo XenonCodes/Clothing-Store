@@ -30,6 +30,7 @@
         position: absolute;
         background-image: url(../img/ic/close-ic.svg);
         background-size: 100%;
+        padding: 0;
     }
 
     &__title {
@@ -102,7 +103,7 @@
         padding: 17px 40px;
         border: 1px solid $light-gray;
         background-color: transparent;
-        @include font($font-weight:300);
+        @include font($font-weight: 300);
         text-transform: uppercase;
         margin: 32px 0 0;
         outline: none;
@@ -125,7 +126,7 @@
             background-color: $dark-pink;
             box-shadow: 5px 5px 10px 2px $shadow;
             cursor: pointer;
-            border: none;
+            border: 1px solid transparent;
         }
     }
 }
