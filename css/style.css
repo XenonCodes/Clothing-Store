@@ -1411,6 +1411,7 @@ body {
   position: absolute;
   background-image: url(../img/ic/close-ic.svg);
   background-size: 100%;
+  padding: 0;
 }
 
 .cart__title {
@@ -1530,7 +1531,7 @@ body {
   background-color: #F26376;
   box-shadow: 5px 5px 10px 2px #00000066;
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .order {
@@ -1618,7 +1619,7 @@ body {
   background-color: #F26376;
   box-shadow: 5px 5px 10px 2px #00000066;
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .order__wrp {
