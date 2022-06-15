@@ -1,0 +1,19 @@
+.basket-info {
+    @include font($font-weight: 900);
+
+    &__wrp {
+        width: 100%;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    &__text {
+        text-align: end;
+        padding: 0 10px 0 0;
+    }
+}
