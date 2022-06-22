@@ -98,6 +98,39 @@
         }
     }
 
+    &__basket {
+        display: none;
+        width: 19px;
+        height: 19px;
+        color: $white;
+        background: $dark-pink;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        right: -12%;
+        top: -25%;
+        @include font(12px, 19px);
+
+        &:hover+.header__basket-info {
+            display: block;
+        }
+    }
+
+    &__basket-info {
+        display: none;
+        z-index: 4;
+        border-radius: 17px;
+        box-shadow: 5px 5px 10px 2px $shadow;
+        width: 400px;
+        background: $white;
+        position: absolute;
+        text-align: center;
+        right: 0;
+        top: 40px;
+        padding: 10px 0;
+        @include font(12px, 19px);
+    }
+
     &__nav {
         z-index: 3;
         display: none;

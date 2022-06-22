@@ -453,6 +453,45 @@ body {
   }
 }
 
+.header__basket {
+  display: none;
+  width: 19px;
+  height: 19px;
+  color: #FFFFFF;
+  background: #F26376;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  right: -12%;
+  top: -25%;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header__basket:hover + .header__basket-info {
+  display: block;
+}
+
+.header__basket-info {
+  display: none;
+  z-index: 4;
+  border-radius: 17px;
+  box-shadow: 5px 5px 10px 2px #00000066;
+  width: 400px;
+  background: #FFFFFF;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 40px;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .header__nav {
   z-index: 3;
   display: none;
@@ -510,6 +549,29 @@ body {
 .nav-sub__link {
   color: #9F9F9F;
   text-decoration: none;
+}
+
+.basket-info {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.basket-info__wrp {
+  width: 100%;
+}
+
+.basket-info__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.basket-info__text {
+  text-align: end;
+  padding: 0 10px 0 0;
 }
 
 .brand {

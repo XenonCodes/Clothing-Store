@@ -1,6 +1,6 @@
 Проект магазина.  
 
-Стек html/scc/scss/bootstrap.  
+Стек html/scc/scss/JS/bootstrap.  
 
 Макет: https://www.figma.com/file/R62n5LP2RbgS3jySegAldj/Shop?node-id=0%3A1  
 
