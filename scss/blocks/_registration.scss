@@ -41,7 +41,28 @@
     }
 
     &__input-radio {
-        margin: 0 10px 0 20px;
+        display: none;
+
+        &:checked+.registration__label::before {
+            background-color: $dark-pink;
+            border: 1px solid $gray;
+            border-radius: 20px
+        }
+    }
+
+    &__label {
+        position: relative;
+        margin: 0 20px 0 30px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -30px;
+            width: 17px;
+            height: 17px;
+            border: 1px solid $gray;
+            border-radius: 20px
+        }
     }
 
     &__text-form {

@@ -101,6 +101,20 @@
                 <li class="header__flex">
                     <a class="header__link button" href="./cart.html"><img src="./img/ic/basket-ic.svg"
                             alt="basket-icon"></a>
+                    <span class="header__basket"></span>
+                    <div class="header__basket-info basket-info">
+                        <div class="basket-info__wrp">
+                            <ul class="basket-info__list">
+                                <li class="basket-info__item">Product name</li>
+                                <li class="basket-info__item">Quantity</li>
+                                <li class="basket-info__item">Price per piece</li>
+                                <li class="basket-info__item">Total</li>
+                            </ul>
+                            <hr>
+                            <p class="basket-info__text">Goods in the basket for the amount of: $<span
+                                    class="basket-info__total"></span></p>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -136,7 +150,7 @@
                     </button>
                     <nav class="sort__nav nav-sub">
                         <button class="sort__button sort__button--nav" type="button">category</button>
-                        <ul class="nav-sub__list">
+                        <ul class="nav-sub__list hidden">
                             <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Accessories</a></li>
                             <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Bags</a></li>
                             <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Denim</a></li>
@@ -152,7 +166,37 @@
                             <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Tanks</a></li>
                         </ul>
                         <button class="sort__button sort__button--nav" type="button">brand</button>
+                        <ul class="nav-sub__list hidden">
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Accessories</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Bags</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Denim</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Denim</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Hoodies & Sweatshirts</a>
+                            </li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Jackets & Coats</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Polos</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Shirts</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Shoes</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Sweaters & Knits</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">T-Shirts</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Tanks</a></li>
+                        </ul>
                         <button class="sort__button sort__button--nav" type="button">designer</button>
+                        <ul class="nav-sub__list hidden">
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Accessories</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Bags</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Denim</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Denim</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Hoodies & Sweatshirts</a>
+                            </li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Jackets & Coats</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Polos</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Shirts</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Shoes</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Sweaters & Knits</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">T-Shirts</a></li>
+                            <li class="nav-sub__item"><a href="#" class="nav-sub__link link">Tanks</a></li>
+                        </ul>
                     </nav>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -172,12 +216,22 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             size
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button">S</button></li>
-                            <li><button class="dropdown-item" type="button">M</button></li>
-                            <li><button class="dropdown-item" type="button">L</button></li>
-                            <li><button class="dropdown-item" type="button">XL</button></li>
-                            <li><button class="dropdown-item" type="button">XXL</button></li>
+                        <ul class="dropdown-menu ps-lg-3">
+                            <li><input class="input" type="checkbox" id="size-s">
+                                <label class="" for="size-s">S</label>
+                            </li>
+                            <li><input class="input" type="checkbox" id="size-m">
+                                <label class="" for="size-m">M</label>
+                            </li>
+                            <li><input class="input" type="checkbox" id="size-l">
+                                <label class="" for="size-l">L</label>
+                            </li>
+                            <li><input class="input" type="checkbox" id="size-xl">
+                                <label class="" for="size-xl">XL</label>
+                            </li>
+                            <li><input class="input" type="checkbox" id="size-xxl">
+                                <label class="" for="size-xxl">XXL</label>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
