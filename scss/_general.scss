@@ -81,3 +81,12 @@ body {
     background-color: $light-gray;
     padding: 12px 18px;
 }
+
+.arrows {
+    color: $black;
+    font-size: 21px;
+
+    &:hover {
+        color: $dark-pink;
+    }
+}
