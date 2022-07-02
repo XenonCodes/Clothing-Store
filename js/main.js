@@ -26,9 +26,10 @@ let basketInfoTextEl = document.querySelector('.basket-info__text');
 
 collectionButtonProdEl.forEach(button => {
     button.addEventListener('click', function (event) {
-        basketIconEl.innerText = +basketIconEl.innerText + 1;
+        basketIconEl.innerText++
         basketIconEl.style.display = "block";
-        event.target.value = +event.target.value + 1;
+        event.target.value++;
+
         let productPriceValue = event.target.parentElement.parentElement.querySelector('.products__price-num');
         let nameProduct = event.target.parentElement.parentElement.querySelector('.products__heading');
         totalPrice.innerText = (+totalPrice.innerText + +productPriceValue.innerText).toFixed(2);
@@ -38,7 +39,7 @@ collectionButtonProdEl.forEach(button => {
             let nameProductEL = document.querySelectorAll('.name-product');
             nameProductEL.forEach(element => {
                 if (element.innerText == nameProduct.innerText) {
-                    let quantityEL = element.nextSibling.nextSibling;
+                    let quantityEL = element.nextElementSibling;
                     quantityEL.innerText = +quantityEL.innerText + 1;
                     let priceTotal = element.parentNode.querySelector('.price-total');
                     priceTotal.innerText = (+productPriceValue.innerText * +quantityEL.innerText).toFixed(2);
@@ -62,3 +63,32 @@ buttonNavEl.addEventListener('click', function () {
 buttonCloseEl.addEventListener('click', function () {
     navEl.style.display = ('');
 });
+
+//Filter показ/скрытие категорий
+let sortButtonNav = document.querySelectorAll('.sort__button--nav');
+sortButtonNav.forEach(button => {
+    button.addEventListener('click', function (event) {
+        event.target.nextElementSibling.classList.toggle('hidden');
+    })
+});
+
+//scroll
+const boxes = document.querySelectorAll('.box');
+
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes(); // shows initial box(es) 
+
+function checkBoxes() {
+    const triggerBottom = (window.innerHeight / 5 * 4);
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            box.classList.add('show');
+        } else {
+            box.classList.remove('show');
+        }
+    })
+}

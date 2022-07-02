@@ -3,6 +3,11 @@ body {
     color: $black;
 }
 
+main,
+footer {
+    overflow-x: hidden;
+}
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -42,6 +47,10 @@ body {
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .link:hover,
 .link:focus {
     color: $red;
@@ -76,4 +85,26 @@ body {
     font-size: 21px;
     background-color: $light-gray;
     padding: 12px 18px;
+}
+
+.arrows {
+    color: $black;
+    font-size: 21px;
+
+    &:hover {
+        color: $dark-pink;
+    }
+}
+
+.box {
+    transform: translateX(400%);
+    transition: transform 0.5s ease;
+
+    &:nth-of-type(even) {
+        transform: translateX(-400%);
+    }
+}
+
+.box.show {
+    transform: translateX(0);
 }

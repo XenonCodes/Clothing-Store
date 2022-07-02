@@ -92,3 +92,16 @@
         @include font(10px, 12px);
     }
 }
+
+.color-grey-pink {
+    color: $light-gray;
+
+    &:hover {
+        color: $dark-pink;
+    }
+}
+
+.pagination--border {
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+}
