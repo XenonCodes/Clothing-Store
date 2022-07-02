@@ -1,6 +1,10 @@
 body {
     font-family: 'Lato', sans-serif;
     color: $black;
+}
+
+main,
+footer {
     overflow-x: hidden;
 }
 
@@ -94,11 +98,11 @@ body {
 
 .box {
     transform: translateX(400%);
-    transition: transform 0.4s ease;
-}
+    transition: transform 0.5s ease;
 
-.box:nth-of-type(even) {
-    transform: translateX(-400%);
+    &:nth-of-type(even) {
+        transform: translateX(-400%);
+    }
 }
 
 .box.show {
