@@ -7,3 +7,5 @@
 Автор дизайна: unknown  
 
 Автор кода: XenonCodes
+
+Site is live at https://xenoncodes.github.io/first-shop/
