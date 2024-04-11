@@ -19,4 +19,4 @@
 
 ## Живой Сайт
 
-Сайт доступен по ссылке [https://xenoncodes.github.io/first-shop/](https://xenoncodes.github.io/first-shop/)
+Сайт доступен по ссылке [https://xenoncodes.github.io/Clothing-Store](https://xenoncodes.github.io/Clothing-Store/)
