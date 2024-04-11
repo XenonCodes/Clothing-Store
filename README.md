@@ -1,11 +1,22 @@
-Проект магазина.  
+# Проект Магазина Одежды
 
-Стек html/scc/scss/JS/bootstrap.  
+Этот проект представляет собой веб-сайт онлайн-магазина одежды. Сайт адаптивен и отлично просматривается на устройствах с разными разрешениями экрана.
 
-Макет: https://www.figma.com/file/R62n5LP2RbgS3jySegAldj/Shop?node-id=0%3A1  
+## Стек
 
-Автор дизайна: unknown  
+- HTML
+- CSS / SCSS
+- JavaScript
+- Bootstrap
 
-Автор кода: XenonCodes
+## Макет Дизайна
 
-Site is live at https://xenoncodes.github.io/first-shop/
+Вы можете посмотреть макет дизайна [здесь](https://www.figma.com/file/R62n5LP2RbgS3jySegAldj/Shop?node-id=0%3A1).
+
+Автор дизайна: неизвестно
+
+Автор кода: Дмитрий Щербаков
+
+## Живой Сайт
+
+Сайт доступен по ссылке [https://xenoncodes.github.io/first-shop/](https://xenoncodes.github.io/first-shop/)
